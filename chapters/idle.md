@@ -29,4 +29,4 @@ pomocí příkazu
 Po spuštění IDLE se nám zobrazí okno, do kterého můžeme psát kód
 v jazyce Python. Kód se okamžitě provede a výsledek se nám vypíše.
 
-![Prostředí IDLE](img/idle.png)
+![Prostředí IDLE](../img/idle.png)
