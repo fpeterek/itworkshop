@@ -83,6 +83,31 @@ Každá instance má nastavené atributy na své vlastní požadované hodnoty a
 odpovídá jednomu skutečnému konkrétnímu letadlu. Konkrétnímu letadlu také
 můžeme přikázat, aby uskutečnilo let z jednoho letiště na druhé.
 
-```
+```Python
 dreamliner.leť(WSSS, OMDB)  # Pošleme letadlo Boeing 787 Dreamliner na let z letiště Singapore Changi na letiště Dubai International
+```
+
+### Používání funkcí a tříd
+
+Pokud bychom chtěli získat výsledek nějaké funkce, musíme ji nejprve zavolat
+(anglicky call, invoke). Volání (invokace) funkce je jednoduché. Nejprve
+napíšeme název funkce, kterou chceme vyvolat. Za název funkce poté dopíšeme
+kulaté závorky, ve kterých vyjmenujeme případné argumenty (parametry), které
+funkci potřebujeme předat. Volání funkcí si můžeme vyzkoušet například
+na funkcích `min` nebo `max`, které jsou součástí jazyka Python.
+
+Funkce `max` přijímá nespecifikovaný počet parametrů a vrátí parametr
+s nejvyšší hodnotou. Funkce `min` analogicky vrací parametr s nejnižší hodnotou.
+
+Volání funkce bez parametru: `list()  # Vrátí prázdný seznam (viz. pozdější kapitoly)`
+Volání funkce s jedním parametrem: `bin(747)  # Vrátí binární reprezentaci čísla 747`
+Volání funkce se dvěma a více parametry: `max(3, 5, 13, -20)  # Vrátí 13`
+
+Návratovou hodnotu funkce můžeme přímo využít v dalším výpočtu, jako argument
+jiné funkce, nebo si ji můžeme přiřadit do proměnné
+
+```Python
+greatest = max(4, 2, 15, 7, 3)  # Přiřazení výsledku funkce proměnné greatest
+min(-1, 3, max(-2, -10, -4), 25)  # Využití výsledku jedné funkce jako argument jiné funkce
+5 + max(2**3, greatest)  # Využití proměnné jako argumentu funkce, využití výsledku funkce v jiném výpočtu
 ```
