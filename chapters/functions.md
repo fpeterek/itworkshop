@@ -1,21 +1,27 @@
-# Moduly, funkce ze standardní knihovny
+# Funkce, třídy, moduly
 
-Se sčítáním a odčítáním čísel si bohužel moc nevystačíme. Už jen kvůli
-výpočtu souřadnic ve 2D prostoru často potřebujeme goniometrické funkce.
-Naštěstí jazyk Python obsahuje rozsáhlou knihovnu tříd a funkcí. Této knihovně
-často říkáme 'standardní knihovna,' anglicky 'standard library.' Tato knihovna
-je, jak již název napovídá, standardizovaná. Nachází se tedy ve všech
-implementacích jazyka Python na všech platformách, a vždy ve stejné podobě.
+Zatím jsme se naučili sčítat, odčítat, případně i násobit čísla. S tím si
+bohužel moc nevystačíme. Proto se tato kapitola věnuje základnímu stavebnímu
+bloku v moderních programovacích jazycích, funkcím. Funkce nám nabízí určitou
+funkcionalitu, na jejímž základě můžeme postavit funkcionalitu jinou, vlastní.
+
+Programovací jazyk Python obsahuje rozsáhlou knihovnu funkcí, tzv. 'standardní
+knihovnu,' anglicky 'standard library'. Jak je již patrné z názvu, tato
+knihovna je standardizovaná a musí ji obsahovat všechny implementace jazyka
+Python. Díky tomu se nemusíme bát využívat funkce ze standardní knihovny.
+Ať už si náš program spustíme kdekoliv, vždy víme, že tam bude stejná knihovna
+se stejnými funkcemi.
 
 ### Funkce
 
-Funkce jsou v moderních programovacích jazycích velmi důležité. Mohli bychom
-si je představit například jako matematické funkce. Na vstupu funkci předáme
-argumenty, se kterými má pracovat. Funkce nám argumenty zpracuje a vrátí nám
-na svém výstupu výsledek. Takto funguje například funkce sinus dobře známá
-z matematiky. Pro vstup `0` nám funkce sinus vrátí hodnotu `0`. Pro vstup `pi/2`
-nebo `90°`funkce sinus vrátí hodnotu `1`. Kdo nevěří, může si to sám ověřit na
-kalkulačce.
+Jak již bylo dříve zmíněno, funkce jsou v programovacích jazycích velmi
+důležíté. Proto je třeba, abychom správě pochopili princip jejich fungování
+a jejich použití. Funkce bychom si mohli představit například jako matematické
+funkce. Na vstupu funkci předáme argumenty, se kterými má pracovat. Funkce nám
+argumenty zpracuje a vrátí nám na svém výstupu výsledek. Takto funguje například
+funkce sinus dobře známá z matematiky. Pro vstup `0` nám funkce sinus vrátí
+hodnotu `0`. Pro vstup `pi/2` nebo `90°` funkce sinus vrátí hodnotu `1`. Kdo
+nevěří, může si to sám ověřit na kalkulačce.
 
 Taková představa by však nebyla úplně vhodná. Není nutně špatná, je pouze
 omezená. Funkce v programovacím jazyce Python toho totiž zvládnou daleko víc.
@@ -42,7 +48,7 @@ bychom našli chybu v části kódu, museli bychom tu samou chybu opravit vícek
 jednou pro každou kopii. Pomocí funkcí také můžeme vytvářet knihovny, podobné
 těm, které programovací jazyk Python nabízí již v základu.
 
-### Třídy a objekty
+### Třídy a objekty
 
 Třídy, a s nimi úzce spojené objekty, jsou již o něco složitější koncept.
 Bohužel se bez něj však v jazyce Python moc neobejdeme, takže je alespoň
@@ -87,6 +93,12 @@ můžeme přikázat, aby uskutečnilo let z jednoho letiště na druhé.
 dreamliner.leť(WSSS, OMDB)  # Pošleme letadlo Boeing 787 Dreamliner na let z letiště Singapore Changi na letiště Dubai International
 ```
 
+Objektově orientované programování se v praxi používá velmi často, právě díky
+možnosti modelovat objekty skutečného světa, ale také díky spoustě dalších věcí,
+které OOP nabízí, jako třeba zvýšená modularita kódu nebo skrytí nadbytečných
+detailů implementace. OOP je ovšem poněkud složitější problematika, kterou se
+nyní nebudeme zabývat více, než je třeba.
+
 ### Používání funkcí a tříd
 
 Pokud bychom chtěli získat výsledek nějaké funkce, musíme ji nejprve zavolat
@@ -111,3 +123,57 @@ greatest = max(4, 2, 15, 7, 3)  # Přiřazení výsledku funkce proměnné great
 min(-1, 3, max(-2, -10, -4), 25)  # Využití výsledku jedné funkce jako argument jiné funkce
 5 + max(2**3, greatest)  # Využití proměnné jako argumentu funkce, využití výsledku funkce v jiném výpočtu
 ```
+
+Třídu instancujeme (vytvoříme z ní objekt) podobným způsobem. Za název třídy
+dopíšeme kulaté závorky, mezi které zapíšeme případné parametry objektu.
+Výsledkem tohoto volání je poté instancovaný objekt, který můžeme využít úplně
+stejně jako v přechozím případu.
+
+```Python
+letadlo = Letadlo('A350-1000', 'G-XWBB', 'Rolls Royce Trent XWB')
+dreamliner = Letadlo('Boeing 787-8 Dreamliner', 'A7-BCO', 'Rolls Royce Trent 1000')
+```
+
+Při práci s objekty se neobejdeme bez operátoru `.`. Operátor `.` slouží
+k přístupu k atributům objektu, ale také k volání členských funkcí (metod)
+nad objekty. Využití operátoru `.` je jednoduché. Nejprve napíšeme název
+proměnné, k jejímž atributům chceme přistoupit. Poté napíšeme `.` a za to název
+atributu, případně volané metody. V případě volání metody za název metody
+zapíšeme kulaté závorky a voláme ji stejně jako obyčejnou funkci. Pokud bychom
+chtěli přistoupit k atributu atributu, můžeme přístupy pomocí operátoru `.`
+jednoduše řetězit.
+
+```Python
+letadlo.motor  # Přístup k atributu motor
+letadlo.let('WSSS', 'OMDB')  # Volání metody let nad objektem letadlo
+letadlo.motor.tah  # Přístup k atributu atributu
+letadlo.motor.start()  # Volání metody nad atributem
+```
+
+### Moduly
+
+Jak již víme, často je vhodné kód organizovat do funkcí, případně tříd.
+S rostoucí komplexitou programu ale rychle roste také množství funkcí a tříd.
+Nakonec tak můžeme stále skončit s nepřehledným a těžko udržovatelným kódem.
+Proto v Pythonu vznikly moduly. Moduly nám umožňují funkce logicky uspořádávat
+dle svého účelu. Modul v Pythonu je pouze obyčejný textový soubor s příponou
+`.py`, který obsahuje kód v jazyce Python. Pokud bychom poté chtěli využít
+některé z funkcí z určitého modulu, stačí nám daný modul importovat pomocí
+direktivy `import`. Jakmile máme modul importovaný, používáme jej podobně jako
+objekty, tedy přistupujeme ke členům modulu za pomocí operátoru `.`.
+
+```Python
+import math  # Import modulu math, který je součástí standardní knihovny jazyka Python
+
+math.pi  # Přístup k proměnné definované v modulu math
+math.cos(math.pi)  # Volání funkce definované v modulu math
+cos_pi = math.cos(math.radians(180))
+
+import turtle
+t = turtle.Turtle()  # Vytvoření objektu podle třídy definované v modulu turtle
+```
+
+Výhodou modulu je také jeho znovupoužitelnost. Pokud bychom chtěli jeden modul
+použít ve více programech, stačí nám pouze daný modul v obou programech
+importovat. Nemusíme tak kopírovat žádný kód, a v případě, že bychom chtěli
+provést změny v modulu, stačí změný provést pouze na jednom místě.

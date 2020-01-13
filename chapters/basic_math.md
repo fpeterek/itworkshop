@@ -70,6 +70,10 @@ Výraz: `2 ** 10`
 
 Výsledek: `1024`
 
+Výraz: `9 ** 0.5`
+
+Výsledek: `3`
+
 **Řetězení**
 
 Matematické výrazy lze samozřejmě řetězit. V takovém případě platí známá

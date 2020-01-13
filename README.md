@@ -5,7 +5,8 @@
 Cílem workshopu je seznámit se se základy programování.
 Programovat budeme v programovacím jazyce Python.
 Jazyk Python je multiplatformní, lze jej tedy využít na platformách
-Linux, macOS, Microsoft Windows, i další. Jazyk Python lze
+Linux, macOS, Microsoft Windows, i další. Během workshopu budeme používat
+operační systém Linux. Jazyk Python lze
 [stáhnout zde.](https://www.python.org/downloads/)
 
 ## Obsah
@@ -13,7 +14,7 @@ Linux, macOS, Microsoft Windows, i další. Jazyk Python lze
 1. [Programovací jazyky](chapters/programming_languages.md)
 2. [Prostředí IDLE](chapters/idle.md)
 3. [Komentáře, aritmetické operace, proměnné](chapters/basic_math.md)
-3. [Moduly, funkce ze standardní knihovny](chapters/stdlib.md)
+3. [Funkce, třídy, moduly](chapters/functions.md)
 4. Logické hodnoty, řetězce, seznamy, operátor `in`
 5. Podmínky, cykly
 6. Definice vlastních funkcí
