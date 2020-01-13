@@ -14,7 +14,7 @@ se stejnými funkcemi.
 
 ### Funkce
 
-Jak již bylo dříve zmíněno, funkce jsou v programovacích jazycích velmi
+Jak už bylo dříve zmíněno, funkce jsou v programovacích jazycích velmi
 důležíté. Proto je třeba, abychom správě pochopili princip jejich fungování
 a jejich použití. Funkce bychom si mohli představit například jako matematické
 funkce. Na vstupu funkci předáme argumenty, se kterými má pracovat. Funkce nám
