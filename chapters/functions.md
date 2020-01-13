@@ -111,9 +111,16 @@ na funkcích `min` nebo `max`, které jsou součástí jazyka Python.
 Funkce `max` přijímá nespecifikovaný počet parametrů a vrátí parametr
 s nejvyšší hodnotou. Funkce `min` analogicky vrací parametr s nejnižší hodnotou.
 
-Volání funkce bez parametru: `list()  # Vrátí prázdný seznam (viz. pozdější kapitoly)`
-Volání funkce s jedním parametrem: `bin(747)  # Vrátí binární reprezentaci čísla 747`
-Volání funkce se dvěma a více parametry: `max(3, 5, 13, -20)  # Vrátí 13`
+```Python
+# Volání funkce bez parametru
+list()  # Vrátí prázdný seznam (viz. pozdější kapitoly)
+
+# Volání funkce s jedním parametrem
+bin(747)  # Vrátí binární reprezentaci čísla 747
+
+# Volání funkce s více parametry
+max(3, 5, 13, -20)  # Vrátí 13
+```
 
 Návratovou hodnotu funkce můžeme přímo využít v dalším výpočtu, jako argument
 jiné funkce, nebo si ji můžeme přiřadit do proměnné
