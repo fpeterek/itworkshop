@@ -15,14 +15,14 @@ operační systém Linux. Jazyk Python lze
 2. [Prostředí IDLE](chapters/idle.md)
 3. [Komentáře, aritmetické operace, proměnné](chapters/basic_math.md)
 3. [Funkce, třídy, moduly](chapters/functions.md)
-4. Logické hodnoty, řetězce, seznamy, operátor `in`
-5. Podmínky, cykly
-6. Definice vlastních funkcí
+4. [Datové typy, kolekce](chapters/data_types.md)
+5. [Základní konstrukce jazyka Python]()
+6. [Definice vlastních funkcí]()
 7. Práce s modulem Turtle
 
 ## Odkazy
 
-* [Cheatsheet](https://docs.python.org/3/)
+* [Cheatsheet](cheatsheet.py)
 * [Dokumentace jazyka Python](https://docs.python.org/3/)
 * [Oficiální tutoriál jazyka Python](https://docs.python.org/3/tutorial/index.html)
 
