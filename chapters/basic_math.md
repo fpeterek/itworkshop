@@ -158,3 +158,9 @@ Příklad:
 >>> x
 20
 ```
+
+---
+
+<div style="text-align: left"  > <a href="idle.md">Předchozí kapitola   </a> </div>
+<div style="text-align: center"> <a href="../README.md">Zpět            </a> </div>
+<div style="text-align: right" > <a href="functions.md">Příští kapitola </a> </div>
