@@ -74,8 +74,8 @@ Třída Letadlo:
     metody: leť(počátek, destinace)
 
 Objekty:
-    Airbus A350-1000, registrace G-XWBA, motor Rolls Royce Trent XWB  # British Airways Airbus A35K
-    Boeing 787-8, registrace A7-BCR, motor Rolls Royce Trent 1000     # Qatar Airways Boeing 787 Dreamliner
+    Airbus A350-1000, registrace G-XWBA, motor Rolls Royce Trent XWB  # British Airways Airbus A35K
+    Boeing 787-8, registrace A7-BCR, motor Rolls Royce Trent 1000     # Qatar Airways Boeing 787 Dreamliner
     Airbus A380-800, registrace A6-EUE, motor Rolls Royce Trent 900   # Emirates Airbus A380
 ```
 
@@ -128,7 +128,7 @@ jiné funkce, nebo si ji můžeme přiřadit do proměnné
 ```Python
 greatest = max(4, 2, 15, 7, 3)  # Přiřazení výsledku funkce proměnné greatest
 min(-1, 3, max(-2, -10, -4), 25)  # Využití výsledku jedné funkce jako argument jiné funkce
-5 + max(2**3, greatest)  # Využití proměnné jako argumentu funkce, využití výsledku funkce v jiném výpočtu
+5 + max(2**3, greatest)  # Využití proměnné jako argumentu funkce, využití výsledku funkce v jiném výpočtu
 ```
 
 Třídu instancujeme (vytvoříme z ní objekt) podobným způsobem. Za název třídy
@@ -170,9 +170,9 @@ direktivy `import`. Jakmile máme modul importovaný, používáme jej podobně 
 objekty, tedy přistupujeme ke členům modulu za pomocí operátoru `.`.
 
 ```Python
-import math  # Import modulu math, který je součástí standardní knihovny jazyka Python
+import math  # Import modulu math, který je součástí standardní knihovny jazyka Python
 
-math.pi  # Přístup k proměnné definované v modulu math
+math.pi  # Přístup k proměnné definované v modulu math
 math.cos(math.pi)  # Volání funkce definované v modulu math
 cos_pi = math.cos(math.radians(180))
 

@@ -28,7 +28,7 @@ vždy objekt. V ostatních jazycích to tak ovšem platit nemusí. Třída bude 
 datovým typem, datový ale nemusí být třídou. Stejně tak objekt budou vždy data,
 data ale nemusí nutně být objektem.
 
-## Základní datové typy v jazyce Python
+## Základní datové typy v jazyce Python
 
 Standardní knihovna jazyka Python obsahuje velké množství tříd, které nalezneme
 v modulech. Kromě těchto tříd ale Python implementuje také několik základních
@@ -37,7 +37,7 @@ importovat. Tyto datové typy jsou `int`, `float`, `bool`, `str`, `list` a dalš
 jako třeba `set` nebo `dict`, kterým se z důvodu jejich složitější nátury
 nebudeme nyní věnovat.
 
-## `int`
+## `int`
 
 Datový typ `int`, z anglického slova 'integer', popisuje celé číslo, ať už
 záporné, kladné, nebo nulu. Datový typ `int` je velmi jednoduchý a přímočarý
@@ -66,7 +66,8 @@ pi = 3.14159
 
 Datový typ `bool`, z anglického 'boolean', používáme, pokud chceme reprezentovat
 jednu logickou hodnotu. Logické hodnoty jsou dvě, `True` a `False`, a používáme
-je při rozhodování v podmínkách, což je téma, které probereme později.
+je při rozhodování v podmínkách. Tématu podmínek se budeme věnovat o dvě
+kapitoly později.
 
 Nad logickými hodnotami můžeme provádět tři základní operace, negaci, logický
 součin a logický součet. Tyto názvy možná na první pohled zní složitě,
@@ -84,7 +85,7 @@ value = False
 not value  # True
 ```
 
-#### Logický součin
+#### Logický součin
 
 Logický součin už je třeba provést na dvou logických hodnotách. Logický součin
 provádíme pomocí operátoru `and`. Logický součin vrátí hodnotu `True`, pokud
@@ -105,7 +106,7 @@ Jestliže jsou oba operandy `False`, bude i výsledkem logického součtu `False
 Pro logický součet používáme operátor `or`.
 
 ```Python
-True or True        # True
+True or True        # True
 True or False       # True
 False or False      # False
 False or not False  # True
@@ -146,7 +147,7 @@ operand levý. Operátor `>` funguje analogicky.
 ```Python
 1 < 2  # True
 2 < 2  # False
-2 > 1  # True
+2 > 1  # True
 ```
 
 #### Operátor `<=`, `>=`
@@ -157,16 +158,16 @@ od operátorů `<` a `>` vrací hodnotu `True` také pokud se hodnoty rovnají.
 ```Python
 1 <= 2  # True
 2 <= 1  # False
-2 >= 2  # True
+2 >= 2  # True
 ```
 
-#### Řetězení porovnávacích operátorů
+#### Řetězení porovnávacích operátorů
 
 Porovnávací operátory v jazyce Python lze také řetězit. Takto zřetězený výraz
 vrátí hodnotu `True` pouze pokud jsou všechna porovnání ve výrazu pravdivá.
 
 ```Python
-1 == (2 - 1) < 3 > 2 != -1  # True
+1 == (2 - 1) < 3 > 2 != -1  # True
 ```
 
 #### Přetypování nelogických hodnot na hodnoty logické
@@ -181,79 +182,23 @@ Při přetypování platí následující pravidla:
 
 1) Všechny číselné hodnoty, které se nerovnají 0, odpovídají hodnotě `True`
 2) Nula odpovídá hodnotě `False`
-3) Všechny neprázdné kolekce(viz zbytek kapitoly) odpovídají hodnotě `True`
+3) Všechny neprázdné kolekce(viz příští kapitola) odpovídají hodnotě `True`
 4) Všechny prázdné kolekce odpovídají hodnotě `False`
-5) Hodnota `None` (viz pozdější odstavec) vždy vrací `False`
+5) Hodnota `None` (viz příští odstavec) vždy vrací `False`
 6) Všechny ostatní objekty vrací `True`, pokud nemají definovanou vlastní
 konverzi
 
-## `str`
+## `None`
 
-Řetězec, v Pythonu `str`, z anglického 'string' je datový typ sloužící
-k reprezentování textu. Objekt typu `str` vytvoříme pomocí uvozovek, ať už
-jednoduchých, nebo složených. Důležité je, aby byl ten samý typ uvozovek
-na začátku i na konci řetězce a aby se uvozovací znak neobjevoval uprostřed
-řetězce, protože by počítač nemusel poznat, kde přesně má řetězec končit.
-
-V řetězci si samozřejmě můžeme ukládat jakýkoliv text chceme. Řetězce můžeme
-sčítat, a dokonce můžeme řetězec násobit celým číslem, pokud bychom chtěli
-obsah řetězce zopakovat vícekrát. V řetězcích samozřejmě můžeme ukládat i čísla.
-`'1234'` je v Pythonu validní řetězec. Musíme si ovšem dát pozor. Ačkoliv
-obsahem tohoto řetězce jsou pouze čísla, řetězec jako číslo použít nemůžeme.
-Výsledkem výrazu `'1234' * 2` nebude `2468`, ale `'12341234'`. Pokud bychom
-chtěli z řetězce vytvořit číslo, můžeme tak učinit způsobem, jaký byl naznačen
-již výše. Na celé číslo převedeme řetězec pomocí výrazu `int(retezec)`,
-na desetinné číslo pomocí výrazu `float(retezec)`.
-
-Třída `str` implementuje spoustu metod užitečných pro práci s textem. Mezi tyto
-metody patří například metoda `lower`, která převede řetězec na malá písmena,
-metoda `upper`, která řetězec naopak převede na velká písmena, metody
-`startswith`, `endswith`, `replace`, a další. Tyto metody si ovšem nemá cenu
-popisovat. Vše důležité lze totiž najít
-v [dokumentaci](https://docs.python.org/3/library/stdtypes.html#textseq).
+Hodnota `None` je speciální hodnotou. Místo hodnoty totiž vyjadřuje spíše
+absenci hodnoty. Pokud je výsledkem výrazu `None`, znamená to, že výraz
+nevrátil žádnou hodnotu. S hodnotou `None` nemůžeme provádět žádné operace.
+Pokud bychom chtěli zkontrolovat, zda je výsledkem nějakého výrazu, případně
+hodnotou proměnné, hodnota `None`, uděláme tak pomocí operátorů `is`, `is not`.
 
 ```Python
-s = 'Airbus A350'
-
-'Text s "uvozovkami"'  # Ano
-"Text s 'uvozovkami'"  # Taky ano
-'Text s 'uvozovkami''  # Ne
-
-s.startswith('Air')  # True
-s.endswith('747')  # False
-s.replace('A350', 'A330')  # 'Airbus A330'
-
-s * 2  # 'Airbus A350AirbusA350'
-'1234' * 3  # '123412341234'
-int('1234') * 3  # 3 702
+result = None
+result is None      # True
+result is not None  # False
+5 is None           # False
 ```
-
-### Formátování řetězců
-
-Pokud víme, jaká data potřebujeme v řetězci uložit, není problém si celý
-řetězec vytvořit už když píšeme kód. Pokud ale potřebujeme, aby obsah řetězce
-závisel na vypočtené hodnotě, a nemůžeme předem říct, jaký co bude v řetězci
-nakonec uloženo, může to být problém. Budeme totiž řetězec muset vytvořit až
-za běhu programu. V Pythonu existuje více způsobů, jak takový řetězec vytvořit.
-Zatím nejnovější, a taky nejjednodušší, způsob formátování řetězců jsou
-takzvané f-stringy. F-stringy se, podobně jako obyčejné stringy, uvozují
-uvozovkami, ať už jednoduchými, nebo dvojitými. Oproti obyčejným stringům
-ale ještě před úvodní uvozovku přidáme znak `f`. Pokud bychom poté v f-stringu
-chtěli uložit hodnotu proměnné, nebo nějakého výrazu, stačí nám v řetězci napsat
-daný výraz, případně proměnnou, do složených závorek. Závorky se za běhu
-programu nahradí skutečnou hodnotou výrazu.
-
-```Python
-f'1 + 1 = {1 + 1}'
-x = 23
-y = 39
-'x + y = {x+y}'  # 'x + y = {x+y}'
-'{x} + {x} = {x + y}'  # '{x} + {x} = {x + y}'
-f'{x} + {x} = {x + y}'  # '23 + 39 = 62'
-f'"Kobeřice".startswith("Ko") = {"Kobeřice".startswith("Ko")}'  # '"Kobeřice".startswith("Ko") = True'
-```
-
-## `list`
-
-Posledním datovým typem, kterým se budeme v této kapitole zabývat, je seznam,
-anglicky list. Seznamy nám umožňují ukládat předem nespecifikovaný počet hodnot.
