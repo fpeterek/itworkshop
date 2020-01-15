@@ -30,3 +30,9 @@ Po spuštění IDLE se nám zobrazí okno, do kterého můžeme psát kód
 v jazyce Python. Kód se okamžitě provede a výsledek se nám vypíše.
 
 ![Prostředí IDLE](../img/idle.png)
+
+---
+
+<div style="text-align: left"  > <a href="programming_languages.md">Předchozí kapitola </a> </div>
+<div style="text-align: center"> <a href="../README.md">Zpět                           </a> </div>
+<div style="text-align: right" > <a href="basic_math.md">Následující kapitola          </a> </div>

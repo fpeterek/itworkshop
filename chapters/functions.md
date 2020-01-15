@@ -184,3 +184,9 @@ Výhodou modulu je také jeho znovupoužitelnost. Pokud bychom chtěli jeden mod
 použít ve více programech, stačí nám pouze daný modul v obou programech
 importovat. Nemusíme tak kopírovat žádný kód, a v případě, že bychom chtěli
 provést změny v modulu, stačí změný provést pouze na jednom místě.
+
+---
+
+<div style="text-align: left"  > <a href="basic_math.md">Předchozí kapitola   </a> </div>
+<div style="text-align: center"> <a href="../README.md">Zpět                  </a> </div>
+<div style="text-align: right" > <a href="data_types.md">Následující kapitola </a> </div>

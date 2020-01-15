@@ -39,3 +39,8 @@ tedy důležité naučit se programovací jazyk. Důležité je naučit
 se programovat. Programovací jazyk je pouze nástroj, který
 k programování využijeme a po pochopení principů programování není
 problém naučit se jiný jazyk, než jaký jsme používali dříve.
+
+---
+
+<div style="text-align: center"> <a href="../README.md">Zpět            </a> </div>
+<div style="text-align: right" > <a href="idle.md">Následující kapitola </a> </div>

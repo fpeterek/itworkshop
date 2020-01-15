@@ -202,3 +202,9 @@ result is None      # True
 result is not None  # False
 5 is None           # False
 ```
+
+---
+
+<div style="text-align: left"  > <a href="functions.md">Předchozí kapitola     </a> </div>
+<div style="text-align: center"> <a href="../README.md">Zpět                   </a> </div>
+<div style="text-align: right" > <a href="collections.md">Následující kapitola </a> </div>
