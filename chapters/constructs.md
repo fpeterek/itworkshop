@@ -1,0 +1,3 @@
+# Základní konstrukce jazyka Python
+
+
