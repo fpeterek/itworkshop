@@ -29,6 +29,12 @@ pomocí příkazu
 Po spuštění IDLE se nám zobrazí okno, do kterého můžeme psát kód
 v jazyce Python. Kód se okamžitě provede a výsledek se nám vypíše.
 
+Prostředí IDLE většinou nepoužíváme k programování. Je využíváno
+spíše k výuce nebo při testování. My jej budeme používat hlavně
+díky jeho automatickému vypisování výsledku, ať se vyhneme
+zbytečnému manuálnímu výpisu. Později samozřejmě přejdeme k jiným
+prostředím.
+
 ![Prostředí IDLE](../img/idle.png)
 
 ---
