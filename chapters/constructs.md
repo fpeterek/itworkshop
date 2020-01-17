@@ -72,7 +72,59 @@ print('Konec')
 # Výstup pro jiný vstup
 #
 # Konec
+```
 
+Blok `elif` využijeme, jestliže potřebujeme alternativní podmínku k bloku `if`.
+Větví `elif` může být více, zapisujeme je hned za větev `if`. Pokud se neprovede
+větev `if`, začnou se kontrolovat alternativní podmínky v blocích `elif`.
+Jestliže počítač narazí na pravdivou podmínku, danou větev provede, skočí na
+konec `if`/`elif` konstrukce a pokračuje v programu dále. Pokud by počítač
+nevyhodnotil ani jednu podmínku jako pravdivou, neprovede se žádný blok
+a počítač pokračuje v programu za poslední `elif` větví. Blok `elif` je
+nepovinný, zapsání `elif` bloku jinam než za `if` blok je ovšem chybou, která
+zabrání spuštění programu.
+
+Blok `elif` se zapisuje stejně jako blok `if`, pouze místo klíčového slova `if`
+využijeme klíčové slovo `elif`. Odsazujeme stejně jako u bloku `if`.
+
+
+
+
+
+
+Blok `else` použijeme, pokud potřebujeme alternativu k bloku `if`. Jakmile
+se v programu objeví blok `if`. Počítač zkontroluje podmínku. Pokud je pravdivá,
+provede se kód v bloku `if`. Pokud pravdivá není, a existuje větev `else`,
+počítač přeskočí do větve `else` a provede ji. Blok `else` je
+nepovinný, zapsání bloku `else` jinde než za blok `if` nebo `elif` ovšem vyvolá
+chybu. Pokud se provede větev `if` nebo jedna z větví `elif`, větev `else` se
+samozřejmě neprovádí.
+
+Blok `else` zapisujeme podobně jako blok `if`. Rozdíl mezi blokem `if` a `else`
+leží v absenci podmínky v bloku `else`. Klíčové slovo `else` tedy zapíšeme,
+na stejnou úroveň odsazení, jako `if`, ke kterému je tento `else` alternativou.
+Hned za `else` zapíšeme znak `:`. Příkazy patřící do větve `else` odsazujeme
+stejným způsobem jako příkazy v bloku `if`.
+
+```Python
+i = int(input('Číslo: '))
+
+if i == 5:
+    print('Vstup je roven pěti.')
+else:
+    print('Vstup není roven pěti')
+
+print('Konec')
+
+# Výstup pro vstup '5'
+#
+# Vstup je roven pěti.
+# Konec
+
+# Výstup pro jiný vstup
+#
+# Vstup není roven pěti.
+# Konec
 ```
 
 
