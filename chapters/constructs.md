@@ -82,52 +82,67 @@ konec `if`/`elif` konstrukce a pokračuje v programu dále. Pokud by počítač
 nevyhodnotil ani jednu podmínku jako pravdivou, neprovede se žádný blok
 a počítač pokračuje v programu za poslední `elif` větví. Blok `elif` je
 nepovinný, zapsání `elif` bloku jinam než za `if` blok je ovšem chybou, která
-zabrání spuštění programu.
+zabrání spuštění programu. `elif` je zkratka pro 'else if'.
 
 Blok `elif` se zapisuje stejně jako blok `if`, pouze místo klíčového slova `if`
 využijeme klíčové slovo `elif`. Odsazujeme stejně jako u bloku `if`.
 
-
-
-
-
-
-Blok `else` použijeme, pokud potřebujeme alternativu k bloku `if`. Jakmile
-se v programu objeví blok `if`. Počítač zkontroluje podmínku. Pokud je pravdivá,
-provede se kód v bloku `if`. Pokud pravdivá není, a existuje větev `else`,
-počítač přeskočí do větve `else` a provede ji. Blok `else` je
-nepovinný, zapsání bloku `else` jinde než za blok `if` nebo `elif` ovšem vyvolá
-chybu. Pokud se provede větev `if` nebo jedna z větví `elif`, větev `else` se
-samozřejmě neprovádí.
-
-Blok `else` zapisujeme podobně jako blok `if`. Rozdíl mezi blokem `if` a `else`
-leží v absenci podmínky v bloku `else`. Klíčové slovo `else` tedy zapíšeme,
-na stejnou úroveň odsazení, jako `if`, ke kterému je tento `else` alternativou.
-Hned za `else` zapíšeme znak `:`. Příkazy patřící do větve `else` odsazujeme
-stejným způsobem jako příkazy v bloku `if`.
-
 ```Python
-i = int(input('Číslo: '))
+letadlo = input('Letadlo: ').lower()
 
-if i == 5:
-    print('Vstup je roven pěti.')
-else:
-    print('Vstup není roven pěti')
+if 'boeing' in letadlo:
+    print('Výrobcem letadla je americká firma Boeing')
+elif 'airbus' in letadlo:
+    print('Výrobcem letadla je evropská firma Airbus')
+elif 'comac' in letadlo:
+    print('Výrobcem letadla je čínská firma COMAC')
 
 print('Konec')
-
-# Výstup pro vstup '5'
-#
-# Vstup je roven pěti.
-# Konec
-
-# Výstup pro jiný vstup
-#
-# Vstup není roven pěti.
-# Konec
 ```
 
+Blok `else` použijeme, pokud chceme, aby se provedl určitý kus kódu v případě,
+že žádná z podmínek v předcházejících `if`/`elif` větvích není pravdivá. Pokud
+je jedna z těchto podmínek evaluována jako pravdivá, a provede se větev `if`
+nebo `elif`, větev `else` je ignorována. Větev `else` je nepovinná, můžeme ji
+ale zapsat pouze za `if` nebo `elif` blok. V opačném případě nám počítač vypíše
+chybu.
 
+Blok `else` zapisujeme podobně jako blok `if`. Větev `else` ovšem nevyžaduje
+podmínku, proto za klíčové slovo `else` dopisujeme rovnou `:` a podmínku
+neuvádíme.
+
+```Python
+x = int(input('První číslo: '))
+op = input('Operátor: ')
+y = int(input('Druhé číslo: '))
+
+if op == '+':
+    print(f'{x} + {y} = {x+y}')
+
+elif op == '-':
+    print(f'{x} - {y} = {x-y}')
+
+elif op == '*':
+    print(f'{x} * {y} = {x*y}')
+
+elif op == '/':
+    print(f'{x} / {y} = {x/y}')
+
+else:
+    print('Neznámý operátor "{op}"')
+
+print('Konec')
+```
+
+## Cyklus `while`:
+
+Často při psaní kódu chceme, aby se určitý kus kódu provedl vícekrát. Samozřejmě
+nám nic nebrání dané řádky kódu jednoduše zkopírovat. Takové řešení je určitě
+taky možné. Nese s sebou ovšem několik nevýhod. Zdrojový kód rychle roste
+do délky a stává se špatně čitelným. Navíc se může stát, že ve zkopírovaném
+kódu můžeme objevit chybu. Poté bychom museli všechen kód smazat a znovu
+zkopírovat. Největší problém ale nastává v případě, kdy nevíme, kolikrát chceme
+část kódu opakovat, nebo když chceme kód opakovat donekonečna.
 
 ---
 
