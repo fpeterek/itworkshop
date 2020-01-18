@@ -15,7 +15,7 @@ kapitola. Nejprve si ale budeme muset povědět něco o odsazování kódu, kter
 je v jazyce Python velmi důležité.
 
 V této kapitole již opustíme prostředí IDLE a využijeme **textového editoru**
-nebo **IDE**.
+nebo **IDE**. Dále začneme názvy proměnných uvádět v angličtině.
 
 ## Odsazování
 
@@ -46,8 +46,8 @@ příkaz být neměl. Stejně tak můžeme využít prázdných řádků, abycho
 ## Konstrukce `if`/`elif`/`else`
 
 Konstrukci `if` využijeme, pokud chceme blok kódu provést pouze za předpokladu,
-že je splněna určitá podmínka. Pokud není, kód se neprovede, počítač skočí
-na konec bloku `if` a pokračuje dál v exekuci programu.
+že je splněna určitá podmínka. Pokud podmínka splněná není, kód se neprovede,
+počítač skočí na konec bloku `if` a pokračuje dál v exekuci programu.
 
 Syntax konstrukce `if` je velmi jednoduchá. Za klíčové slovo `if` zapíšeme svou
 podmínku (podmínkou může být jakýkoliv výraz, jehož výsledkem je hodnota typu
@@ -88,13 +88,13 @@ Blok `elif` se zapisuje stejně jako blok `if`, pouze místo klíčového slova 
 využijeme klíčové slovo `elif`. Odsazujeme stejně jako u bloku `if`.
 
 ```Python
-letadlo = input('Letadlo: ').lower()
+aircraft = input('Letadlo: ').lower()
 
-if 'boeing' in letadlo:
+if 'boeing' in aircraft:
     print('Výrobcem letadla je americká firma Boeing')
-elif 'airbus' in letadlo:
+elif 'airbus' in aircraft:
     print('Výrobcem letadla je evropská firma Airbus')
-elif 'comac' in letadlo:
+elif 'comac' in aircraft:
     print('Výrobcem letadla je čínská firma COMAC')
 
 print('Konec')
@@ -134,7 +134,7 @@ else:
 print('Konec')
 ```
 
-## Cyklus `while`:
+## Cykly
 
 Často při psaní kódu chceme, aby se určitý kus kódu provedl vícekrát. Samozřejmě
 nám nic nebrání dané řádky kódu jednoduše zkopírovat. Takové řešení je určitě
@@ -143,6 +143,135 @@ do délky a stává se špatně čitelným. Navíc se může stát, že ve zkop�
 kódu můžeme objevit chybu. Poté bychom museli všechen kód smazat a znovu
 zkopírovat. Největší problém ale nastává v případě, kdy nevíme, kolikrát chceme
 část kódu opakovat, nebo když chceme kód opakovat donekonečna.
+
+K opakování určitého bloku kódu používáme v programování cykly. V programovacím
+jazyce Python máme dva typy cyklů.
+
+## Cyklus `while`
+
+Cyklus `while` využijeme v případě, kdy chceme, aby se část kódu opakovala,
+dokud podmínka odpovídá hodnotě `True`. Cyklus `while` zapisujeme úplně stejně
+jako blok `if`, pouze místo klíčového slova `if` použijeme klíčové slovo
+`while`. Kód se poté bude opakovat, dokud je podmínka splněna. Pokud je podmínka
+`False` již při první kontrole, kód se neprovede vůbec.
+
+```Python
+number = 7
+text = 'Hádej číslo v rozsahu 1 až 10: '
+while int(input(text)) != number:
+    print('Špatné číslo, hádej znovu.')
+print(f'Správně. Číslo {number} je hledané číslo.')
+```
+
+Pokud bychom chtěli vytvořit nekonečnou smyčku, stačí jako podmínku použít
+hodnotu `True`.
+
+```Python
+import time
+
+i = 0
+# Nekonečný cyklus lze ukončit stiskem ctrl+c
+while True:
+    print(i)
+    i += 1
+    time.sleep(1)
+```
+
+## Cyklus `for`
+
+Cyklus `for` se nejčastěji využívá k průchodu kolekcí. Cyklus `for` vytvoří
+proměnnou, do které postupně přiřazuje prvky z kolekce jeden za druhým. Pro
+každou hodnotu v kolekci proběhne tělo cyklu právě jednou. Pozor! Pokud
+proměnné využité cyklem `for` přiřadíme jinou hodnotu, změníme pouze danou
+proměnnou, nezměníme původní hodnotu v kolekci.
+
+```Python
+fleet = ['Airbus A350', 'Airbus A320', 'Airbus A320', 'Airbus A321XLR']
+
+for aircraft in fleet:
+    print(aircraft)
+```
+
+### Třída `range`
+
+Třída `range` je často využívána ve spojení s cyklem `for`. Objekty typu `range`
+odpovídají sekvenci čísel. Při vytváření objektu typu `range` zadáme začátek,
+konec, a případně krok v sekvenci. Pokud krok nezadáme, objekt `range` je
+inicializován s krokem velikosti 1. Objekt typu `range` poté vygeneruje sekvenci
+čísel podle zadaných parametrů. Sekvence začíná v zadaném začátku a hodnota
+se postupně zvyšuje o zadaný krok, dokud nedojde do zadaného konce. Pozor,
+specifikovaný konec už do sekvence nepatří.
+
+```Python
+for i in range(1, 10):
+    print(i, end=' ')
+print('')
+
+# 1 2 3 4 5 6 7 8 9
+
+for i in range(1, 10, 3):
+    print(i, end=' ')
+print('')
+
+# 1 4 7
+```
+
+Objekt typu `range` není seznam a nelze jej jako seznam využít. Můžeme z něj
+ale snadno seznam vytvořit, pokud bychom potřebovali.
+
+```Python
+lst = list(range(1, 11))
+print(lst)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+## Definice vlastních funkcí
+
+Proč a jak využíváme funkce v programovacích jazycích jsme si ukázali
+v předchozích kapitolách. Nyní si ukážeme, jak si můžeme vytvořit funkci
+vlastní.
+
+Při definici funkce využijeme klíčové slovo `def` (z anglického `define`).
+Za klíčové slovo `def` zapíšeme název funkce. Název funkce následují kulaté
+závorky, uvnitř kterých specifikujeme případné parametry. Za uzavírající kulatou
+závorku zapíšeme znak `:`. Dále již pokračujeme na novém řádku, kde kód musíme
+odsadit.
+
+Pokud bychom chtěli z funkce vrátit nějakou hodnotu, můžeme tak udělat za pomocí
+klíčového slova `return`.
+
+```Python
+import math
+
+def greet(name):
+    print(f'Hello, {name}!')
+
+def hello_world():
+    greet('World')
+
+def calc_perimeter(radius):
+    return round(math.pi * radius**2, 2)
+
+def sum_of_numbers(lst):
+    total = 0
+    for i in lst:
+        total += i
+    return total
+
+def is_valid_triangle(a, b, c):
+    greatest = max(a, b, c)
+    if a == greatest:
+        return a < b + c
+    elif b == greatest:
+        return b < a + c
+    return c < a + b
+
+
+hello_world()  # Hello, World!
+greet('Python')  # Hello, Python!
+calc_perimeter(4)  # 50.27
+sum_of_numbers(list(range(1, 11)))  # 55
+is_valid_triangle(3, 4, 5)  # True
+is_valid_triangle(3, 4, 8)  # False
 
 ---
 
