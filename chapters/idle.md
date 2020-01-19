@@ -15,7 +15,9 @@ z oficiálních stránek jazyka Python se nám na počítač nainstaluje
 automaticky. Pokud používáme operační systém Linux, je třeba jej
 doinstalovat pomocí příkazu
 
-`sudo apt install idle`
+```bash
+sudo apt install idle
+```
 
 #### Spuštění IDLE
 

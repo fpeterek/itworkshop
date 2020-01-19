@@ -30,7 +30,16 @@ pro člověka. Proto většina moderních programovacích jazyků připomíná, 
 částečně, mluvenou angličtinu. Kód napsaný v takovém programovacím jazyce
 se nazývá 'zdrojový kód.' Zdrojový kód je poté překladačem přeložen do
 tzv. 'strojového' (binárního) kódu, kterému počítač rozumí. Programovací
-jazyk bez překladače pro počítač nic neznamená.
+jazyk bez překladače pro počítač nic neznamená. Zdrojové soubory samotné
+spustitelné nejsou.
+
+Soubory se zdrojovými kódy jsou obyčejné textové soubory. Zdrojový kód je zapsán
+jako obyčejný text. Struktura souboru se v ničem neliší od souborů typu `.txt`.
+Jediný znatelný rozdíl je v příponě souboru, která je změněná z `.txt`
+na příponu jazyka, ve kterém je zdrojový kód napsaný. Skoro každý jazyk má dnes
+svou vlastní příponu, která slouží programátorům i počítačům k rychlému
+rozeznání jazyka, ve jakém je napsán kód programu. Programovací jazyk Python
+využívá příponu `.py`.
 
 Programovacích jazyků dnes existuje spousta. Každý má své výhody
 a nevýhody a každý se hodí k nečemu jinému. V jádru si ale spousta

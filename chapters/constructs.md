@@ -275,6 +275,6 @@ is_valid_triangle(3, 4, 8)  # False
 
 ---
 
-<div style="text-align: left"  > <a href="collections.md">Předchozí kapitola </a> </div>
-<div style="text-align: center"> <a href="../README.md">Zpět                 </a> </div>
-<div style="text-align: right" > <a href="turtle.md">Následující kapitola    </a> </div>
+<div style="text-align: left"  > <a href="terminal.md">Předchozí kapitola </a> </div>
+<div style="text-align: center"> <a href="../README.md">Zpět              </a> </div>
+<div style="text-align: right" > <a href="turtle.md">Následující kapitola </a> </div>

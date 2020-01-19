@@ -17,8 +17,9 @@ operační systém Linux. Jazyk Python lze
 3. [Funkce, třídy, moduly](chapters/functions.md)
 4. [Datové typy](chapters/data_types.md)
 5. [Kolekce](chapters/collections.md)
-6. [Základní konstrukce jazyka Python](chapters/constructs.md)
-7. [Práce s modulem Turtle](chapters/turtle.md)
+6. [Spouštění programů z terminálu, IDE](chapters/terminal.md)
+7. [Základní konstrukce jazyka Python](chapters/constructs.md)
+8. [Práce s modulem Turtle](chapters/turtle.md)
 
 ## Odkazy
 
