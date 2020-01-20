@@ -224,7 +224,7 @@ lst = list(range(1, 11))
 print(lst)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-## Definice vlastních funkcí
+## Definice vlastních funkcí
 
 Proč a jak využíváme funkce v programovacích jazycích jsme si ukázali
 v předchozích kapitolách. Nyní si ukážeme, jak si můžeme vytvořit funkci
@@ -272,6 +272,7 @@ calc_perimeter(4)  # 50.27
 sum_of_numbers(list(range(1, 11)))  # 55
 is_valid_triangle(3, 4, 5)  # True
 is_valid_triangle(3, 4, 8)  # False
+```
 
 ---
 
