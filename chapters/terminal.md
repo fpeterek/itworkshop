@@ -61,6 +61,6 @@ rozhraní terminálu, jelikož jim přijde rychlejší a příjemnější na pou
 
 ---
 
-<div style="text-align: left"  > <a href="terminal.md">Předchozí kapitola </a> </div>
-<div style="text-align: center"> <a href="../README.md">Zpět              </a> </div>
-<div style="text-align: right" > <a href="turtle.md">Následující kapitola </a> </div>
+<div style="text-align: left"  > <a href="collections.md">Předchozí kapitola  </a> </div>
+<div style="text-align: center"> <a href="../README.md">Zpět                  </a> </div>
+<div style="text-align: right" > <a href="constructs.md">Následující kapitola </a> </div>
