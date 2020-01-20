@@ -19,7 +19,18 @@ Python.
 
 ## Vývojové prostředí PyCharm
 
-Placeholder
+Vývojové prostředí PyCharm je dnes považováno v podstatě za standard mezi
+vývojáři používajícími Python. Díky své spoustě funkcí se ovšem může na první
+pohled zdát komplikovanější, než ve skutečnosti je. Proto si ukážeme, jak lze
+ve vývojovém prostředí PyCharm vytvořit projekt a napsat a následně spustit
+jednoduchý zdrojový kód.
+
+#### Spuštění PyCharmu a vytvoření projektu
+
+Docela ironicky se situace zkomplikuje již při spuštění PyCharmu. Po spuštění
+může totiž dojít ke dvěma odlišným věcem. Může dojít k zobrazení okna sloužícímu
+k výběru projektu, nebo přímo k otevření projektu již existujícího. Toto chování
+závisí na nastavení a předchozím užívání prostředí PyCharm.
 
 ## Spouštění programů z terminálu
 
