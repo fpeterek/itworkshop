@@ -42,6 +42,7 @@ Pokud se otevře uvítací okno s výběrem projektu, můžeme založit nový pr
 anebo otevřít projekt starší. Jen pozor, ať neotevřeme cizí projekt!
 
 ![Uvítací okno](../img/pycharm_welcome.png)
+
 Uvítací okno
 
 Projekt založíme kliknutím na tlačítko `Create New Project`. Vybereme čistý
@@ -49,11 +50,13 @@ Python bez jakýchkoliv frameworků, zadáme adresu a název projektu a vytvoř�
 projekt.
 
 ![Vytvoření projektu](../img/pycharm_new_project.png)
+
 Vytvoření projektu
 
 Po vytvoření projektu PyCharm zobrazí okno s projektem.
 
 ![Otevřený projekt](../img/pycharm_project_created.png)
+
 Otevřený projekt
 
 Také se může stát, že PyCharm zobrazí již předem vytvořený projekt. V takovém
@@ -71,6 +74,7 @@ klávesy `enter` soubor vytvoříme. Při vytváření souboru bychom se měli u
 v jazyce Python.
 
 ![Hello World! v prostředí PyCharm](../img/pycharm_hello.png)
+
 Program Hello, World! v prostředí PyCharm.
 
 Program spustíme klepnutím na `Run->Run...` a výběrem souboru, který chceme
