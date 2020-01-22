@@ -5,7 +5,7 @@ soustavou. Binární soustava nám umožňuje reprezentovat dva stavy, stavy,
 které často nazýváme třeba `ano`/`ne` nebo `1`/`0`. Co přesně tyto dvě
 hodnoty reprezentují není důležité. Můžeme jimi vyjádřit skoro cokoliv,
 záleží jen na domluvě. Důležité je, že těmto dvěma hodnotám, a tedy i
-binární soustavě rozumí počítač. Ne češtině, ne angličtině,
+binární soustavě, rozumí počítač. Ne češtině, ne angličtině,
 ne klingonštině, ani žádné jiné řeči, ale binární soustavě. Abychom
 se tak s počítačem domluvili, musíme mu prezentovat data právě
 v binární podobě. Na první pohled to může vypadat zbytečně komplikovaně.
@@ -21,7 +21,7 @@ data v binární podobě. Když někomu chceme poslat obrázek, nechceme ten obr
 do počítače zapisovat v jedničkách a nulách. Když někomu chceme poslat
 zprávu, nechceme ji nejdříve ručně kódovat do hodnot `true`/`false`.
 A pravda je... programátorům se to nechce taky. Ve snaze ušetřit si práci
-tak vymysleli něco, čemu dnes říkáme programovací jazyky.
+tak vymysleli nástroj, kterému dnes říkáme programovací jazyky.
 
 Programovací jazyky slouží k ulehčení komunikace mezi člověkem
 a počítačem. Programovací jazyky jsou navržené tak, aby v nich
@@ -38,11 +38,11 @@ jako obyčejný text. Struktura souboru se v ničem neliší od souborů typu `.
 Jediný znatelný rozdíl je v příponě souboru, která je změněná z `.txt`
 na příponu jazyka, ve kterém je zdrojový kód napsaný. Skoro každý jazyk má dnes
 svou vlastní příponu, která slouží programátorům i počítačům k rychlému
-rozeznání jazyka, ve jakém je napsán kód programu. Programovací jazyk Python
+rozeznání jazyka, v jakém je napsán kód programu. Programovací jazyk Python
 využívá příponu `.py`.
 
 Programovacích jazyků dnes existuje spousta. Každý má své výhody
-a nevýhody a každý se hodí k nečemu jinému. V jádru si ale spousta
+a nevýhody a každý se hodí k něčemu jinému. V jádru si ale spousta
 jazyků je velmi podobných, a princip programování se nemění. Není
 tedy důležité naučit se programovací jazyk. Důležité je naučit
 se programovat. Programovací jazyk je pouze nástroj, který

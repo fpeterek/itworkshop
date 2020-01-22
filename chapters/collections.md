@@ -8,29 +8,29 @@ ukážeme v následujících odstavcích.
 
 ## `str`
 
-Řetězec, v Pythonu `str`, z anglického 'string' je datový typ sloužící
+Řetězec, v Pythonu `str` z anglického 'string', je datový typ sloužící
 k reprezentování textu. Objekt typu `str` vytvoříme pomocí uvozovek, ať už
-jednoduchých, nebo složených. Důležité je, aby byl ten samý typ uvozovek
-na začátku i na konci řetězce a aby se uvozovací znak neobjevoval uprostřed
+jednoduchých nebo složených. Důležité je, aby byl ten samý typ uvozovek
+na začátku i na konci řetězce a aby se uvozovací znak neobjevoval uvnitř
 řetězce, protože by počítač nemusel poznat, kde přesně má řetězec končit.
 Řetězec je kolekcí, protože reprezentuje množinu jednotlivých znaků.
 
 V řetězci si samozřejmě můžeme ukládat jakýkoliv text chceme. Řetězce můžeme
-sčítat, a dokonce můžeme řetězec násobit celým číslem, pokud bychom chtěli
-obsah řetězce zopakovat vícekrát. V řetězcích samozřejmě můžeme ukládat i čísla.
-`'1234'` je v Pythonu validní řetězec. Musíme si ovšem dát pozor. Ačkoliv
-obsahem tohoto řetězce jsou pouze čísla, řetězec jako číslo použít nemůžeme.
-Výsledkem výrazu `'1234' * 2` nebude `2468`, ale `'12341234'`. Pokud bychom
-chtěli z řetězce vytvořit číslo, můžeme tak učinit způsobem, jaký byl naznačen
-již výše. Na celé číslo převedeme řetězec pomocí výrazu `int(retezec)`,
-na desetinné číslo pomocí výrazu `float(retezec)`.
+sčítat a dokonce můžeme řetězec násobit celým číslem, pokud bychom chtěli
+obsah řetězce zopakovat vícekrát. V řetězcích samozřejmě můžeme ukládat
+i číselné znaky. `'1234'` je v Pythonu validní řetězec. Musíme si ovšem dát
+pozor. Ačkoliv obsahem tohoto řetězce jsou pouze čísla, řetězec jako číslo
+použít nemůžeme. Výsledkem výrazu `'1234' * 2` nebude `2468`, ale `'12341234'`.
+Pokud bychom chtěli z řetězce vytvořit číslo, můžeme tak učinit způsobem, jaký
+byl naznačen již výše. Na celé číslo převedeme řetězec pomocí výrazu
+`int(retezec)`, na desetinné číslo pomocí výrazu `float(retezec)`.
 
 Třída `str` implementuje spoustu metod užitečných pro práci s textem. Mezi tyto
 metody patří například metoda `lower`, která převede řetězec na malá písmena,
 metoda `upper`, která řetězec naopak převede na velká písmena, metody
 `startswith`, `endswith`, `replace`, a další. Tyto metody si ovšem nemá cenu
-popisovat. Vše důležité lze totiž najít
-v [dokumentaci](https://docs.python.org/3/library/stdtypes.html#textseq).
+popisovat. Vše důležité lze totiž [najít
+v dokumentaci](https://docs.python.org/3/library/stdtypes.html#textseq).
 
 ```Python
 s = 'Airbus A350'
@@ -52,19 +52,19 @@ int('1234') * 3  # 3 702
 
 Pokud víme, jaká data potřebujeme v řetězci uložit, není problém si celý
 řetězec vytvořit už když píšeme kód. Pokud ale potřebujeme, aby obsah řetězce
-závisel na vypočtené hodnotě, a nemůžeme předem říct, jaký co bude v řetězci
+závisel na vypočtené hodnotě, a nemůžeme předem říct, co bude v řetězci
 nakonec uloženo, může to být problém. Budeme totiž řetězec muset vytvořit až
 za běhu programu. V Pythonu existuje více způsobů, jak takový řetězec vytvořit.
 Zatím nejnovější, a taky nejjednodušší, způsob formátování řetězců jsou
 takzvané f-stringy. F-stringy se, podobně jako obyčejné stringy, uvozují
-uvozovkami, ať už jednoduchými, nebo dvojitými. Oproti obyčejným stringům
-ale ještě před úvodní uvozovku přidáme znak `f`. Pokud bychom poté v f-stringu
-chtěli uložit hodnotu proměnné, nebo nějakého výrazu, stačí nám v řetězci napsat
-daný výraz, případně proměnnou, do složených závorek. Závorky se za běhu
+uvozovkami, ať už jednoduchými nebo dvojitými. Oproti obyčejným stringům
+ale ještě před úvodní uvozovky přidáme znak `f`. Pokud bychom poté v f-stringu
+chtěli uložit hodnotu proměnné nebo nějakého výrazu, stačí nám v řetězci napsat
+danou proměnnou, případně výraz, do složených závorek. Závorky se za běhu
 programu nahradí skutečnou hodnotou výrazu.
 
 ```Python
-f'1 + 1 = {1 + 1}'
+f'1 + 1 = {1 + 1}'  # '1 + 1 = 2'
 x = 23
 y = 39
 'x + y = {x+y}'  # 'x + y = {x+y}'
@@ -77,21 +77,21 @@ f'"Kobeřice".startswith("Ko") = {"Kobeřice".startswith("Ko")}'  # '"Kobeřice"
 
 Posledním datovým typem, kterým se budeme v této kapitole zabývat, je seznam,
 anglicky 'list'. Seznamy nám umožňují ukládat předem nespecifikovaný počet hodnot.
-Tato vlastnost je užitečná především v případě, že předem nevíme, kolik vůbec
+Tato vlastnost je užitečná především v případě, kdy předem nevíme, kolik vůbec
 budeme chtít uložit hodnot. Další výhodou seznamu je ovšem také možnost
 procházet jím pomocí cyklu (viz příští kapitola), což nám umožňuje psát kratší
 a čitelnější kód. Také můžeme pomocí seznamu omezit počet proměnných. Měli
-bychom si ale dát pozor. Seznamy jsou užitečná věc, ale bychom v nich nutně
-ukládat vše pouze za účelem omezení počtu proměnných. Je velmi důležité, abychom
-psali čitelný kód, a list vzájemně nesouvisejících hodnot, ke kterým
-přistupujeme nesystematicky, může být velmi matoucí.
+bychom si ale dát pozor. Seznamy jsou užitečná věc, neměli bychom v nich ale
+nutně ukládat vše pouze za účelem omezení počtu proměnných. Psát čitelný kód
+je nesmírně důležité a list vzájemně nesouvisejících hodnot, ke kterým navíc
+přistupujeme zdánlivě nesystematicky, může být velmi matoucí.
 
 Zapsáním prázdných hranatých závorek vytvoříme nový prázdný seznam. Zapsáním
-hodnot oddělených čárkami vytvoříme seznam zadaných hodnot. Tím ovšem práce
-se seznamem nekončí. Seznam má totiž dynamickou velikost. Jinými slovy,
-seznam se může zvětšovat i zmenšovat podle našich potřeb. Můžeme do něj kdykoliv
-přidat novou hodnotu, odebrat z něj hodnotu starší, nebo přistupovat k současným
-hodnotám a případně je upravovat.
+hodnot oddělených čárkami do těchto hranatých závorek vytvoříme seznam zadaných
+hodnot. Tím ovšem práce se seznamem nekončí. Seznam má totiž dynamickou délku.
+Jinými slovy, seznam se může zvětšovat i zmenšovat podle našich potřeb. Můžeme
+do něj kdykoliv přidat novou hodnotu, odebrat z něj hodnotu starší, nebo
+přistupovat k současným hodnotám a případně je upravovat.
 
 Seznam je, jako všechno ostatní v jazyce Python, objekt. Pracujeme s ním tedy
 pomocí metod. Mezi tyto metody patří například metoda `append`, která na konec
@@ -112,12 +112,11 @@ print(seznam)  # [1, 2, 3, 4]
 ## Práce s kolekcemi
 
 Kromě metod vlastních jednotlivým kolekcím obsahuje Python také několik funkcí,
-které fungují nezávisle nad použitou kolekcí. Ty nejdůležitější si nyní
-popíšeme.
+které fungují nad všemi kolekcemi zároveň. Ty nejdůležitější si nyní popíšeme.
 
 ### Funkce `len`
 
-Funkce `len` přijímá jako svůj první argument kolekci. Její návratovou hodnotou
+Funkce `len` přijímá jako svůj argument kolekci. Její návratovou hodnotou
 je délka předané kolekce.
 
 ```Python
@@ -175,7 +174,7 @@ přirozeněji.
 ```
 
 Pokud vyhledáváme prvky v řetězci, můžeme pomocí operátoru `in` hledat nejen
-jednotlivé znaky, ale také podřetězce (anglicky 'substringy').ß
+jednotlivé znaky, ale také podřetězce (anglicky 'substringy').
 
 ```Python
 'A350' in `Airbus A350`  # True

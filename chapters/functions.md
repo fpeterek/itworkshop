@@ -15,7 +15,7 @@ se stejnými funkcemi.
 ### Funkce
 
 Jak už bylo dříve zmíněno, funkce jsou v programovacích jazycích velmi
-důležíté. Proto je třeba, abychom správě pochopili princip jejich fungování
+důležíté. Proto je třeba abychom správně pochopili princip jejich fungování
 a jejich použití. Funkce bychom si mohli představit například jako matematické
 funkce. Na vstupu funkci předáme argumenty, se kterými má pracovat. Funkce nám
 argumenty zpracuje a vrátí nám na svém výstupu výsledek. Takto funguje například
@@ -40,10 +40,10 @@ vstupních argumentů.
 Hlavní důvod, proč programátoři používají funkce, je, že nám funkce umožní
 určitý kus kódu používat vícekrát bez zbytečného kopírování. V době, kdy funkce
 ještě neexistovali, museli programátoři, pokud chtěli využít kus kódu vícekrát,
-kód několikrát zkopírovat, případně použít skoky. Skoky vedly ke špatně
+kód několikrát zkopírovat, případně přímo použít skoky. Skoky vedly ke špatně
 čitelnému kódu, kódu, který neformálně označujeme jako `spaghetti code`, neboť
 právě špagety docela dobře vystihují strukturu takového kódu. V případě
-kopírování byl zase zdrojový kód zbytečně dlouhý, a špatně se upravoval. Pokud
+kopírování byl zase zdrojový kód zbytečně dlouhý a špatně se upravoval. Pokud
 bychom našli chybu v části kódu, museli bychom tu samou chybu opravit vícekrát,
 jednou pro každou kopii. Pomocí funkcí také můžeme vytvářet knihovny, podobné
 těm, které programovací jazyk Python nabízí již v základu.
@@ -68,7 +68,7 @@ Tato definice se nejspíše bude neprogramátorům zdát matoucí. Ukážeme si 
 příklad, který účel tříd a objektů, a rozdíl mezi nimi, snad osvětlí o něco
 lépe.
 
-```
+```Python
 Třída Letadlo:
     atributy: model, registrace, typ motoru
     metody: leť(počátek, destinace)
@@ -97,7 +97,7 @@ Objektově orientované programování se v praxi používá velmi často, práv
 možnosti modelovat objekty skutečného světa, ale také díky spoustě dalších věcí,
 které OOP nabízí, jako třeba zvýšená modularita kódu nebo skrytí nadbytečných
 detailů implementace. OOP je ovšem poněkud složitější problematika, kterou se
-nyní nebudeme zabývat více, než je třeba.
+nyní nebudeme zabývat více než je třeba.
 
 ### Používání funkcí a tříd
 
@@ -127,14 +127,14 @@ jiné funkce, nebo si ji můžeme přiřadit do proměnné
 
 ```Python
 greatest = max(4, 2, 15, 7, 3)  # Přiřazení výsledku funkce proměnné greatest
-min(-1, 3, max(-2, -10, -4), 25)  # Využití výsledku jedné funkce jako argument jiné funkce
+min(-1, 3, max(-2, -10, -4), 25)  # Využití výsledku jedné funkce jako argumentu jiné funkce
 5 + max(2**3, greatest)  # Využití proměnné jako argumentu funkce, využití výsledku funkce v jiném výpočtu
 ```
 
-Třídu instancujeme (vytvoříme z ní objekt) podobným způsobem. Za název třídy
-dopíšeme kulaté závorky, mezi které zapíšeme případné parametry objektu.
-Výsledkem tohoto volání je poté instancovaný objekt, který můžeme využít úplně
-stejně jako v přechozím případu.
+Třídu instancujeme (vytvoříme z ní objekt) způsobem podobným volání funkce.
+Za název třídy dopíšeme kulaté závorky, mezi které zapíšeme případné parametry
+objektu. Výsledkem tohoto volání je poté instancovaný objekt, který můžeme
+využít úplně stejně jako v přechozím případu.
 
 ```Python
 letadlo = Letadlo('A350-1000', 'G-XWBB', 'Rolls Royce Trent XWB')
@@ -144,8 +144,8 @@ dreamliner = Letadlo('Boeing 787-8 Dreamliner', 'A7-BCO', 'Rolls Royce Trent 100
 Při práci s objekty se neobejdeme bez operátoru `.`. Operátor `.` slouží
 k přístupu k atributům objektu, ale také k volání členských funkcí (metod)
 nad objekty. Využití operátoru `.` je jednoduché. Nejprve napíšeme název
-proměnné, k jejímž atributům chceme přistoupit. Poté napíšeme `.` a za to název
-atributu, případně volané metody. V případě volání metody za název metody
+proměnné, k jejímž atributům chceme přistoupit. Poté napíšeme `.` a za ni název
+atributu, případně volané metody. V případě volání metody za její název
 zapíšeme kulaté závorky a voláme ji stejně jako obyčejnou funkci. Pokud bychom
 chtěli přistoupit k atributu atributu, můžeme přístupy pomocí operátoru `.`
 jednoduše řetězit.

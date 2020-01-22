@@ -23,7 +23,7 @@ nebo k sepsání věcí, které je ještě třeba dodělat.
 
 ## Jednoduchá aritmetika
 
-Zapsáním jednoduchého matematického výrazu do prostředí IDLE a jejím
+Zapsáním jednoduchého matematického výrazu do prostředí IDLE a jeho
 následným spuštěním můžeme získat výsledek námi zadaného výrazu.
 
 V programovacím jazyce Python můžeme využívat následující operátory
@@ -86,7 +86,7 @@ Výsledek: `10`
 
 **Závorky**
 
-Pořadí operací lze změnit pomocí obyčejných závorek
+Pořadí operací lze změnit pomocí kulatých závorek
 
 Výraz: `(2 + 2) * 4`
 
@@ -109,7 +109,7 @@ nerovnající se současné hodnotě proměnné
 
 Příklad:
 
-```
+```Python
 >>> pi = 3.14
 >>> pi
 3.14
@@ -144,7 +144,7 @@ operátory.
 
 Příklad:
 
-```
+```Python
 >>> x = 10
 >>> x = x * (1.1 + 0.1)
 >>> x

@@ -24,7 +24,9 @@ sudo apt install idle
 Prostředí IDLE lze spustit kliknutím na ikonku nebo z terminálu
 pomocí příkazu
 
-`idle`
+```bash
+idle
+```
 
 #### Prostředí IDLE
 

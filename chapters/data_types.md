@@ -1,15 +1,15 @@
 # Datové typy
 
-Datové typy nejsou v jazyce Python dodržovány tolik, jako v některých jiných
-jazycích. Díky tomu je vývoj v jazyce Python rychlejší a pohodlnější, ale také
-díky tomu může vzniknout celá řada bugů, které by se v jazyce, který
-na dodržování datových typů dbá více, vůbec nikdy neobjevily. I přes nižší
-podmínky na dodržování datových typů bychom o nich však stejně měli něco vědět.
-Nejenom že se každý programátor ve svém životě setká s alespoň jedním jazykem,
-který je v tomhle ohledu striktnější, ale i v jazyce Python nám znalost toho,
-co je to datový typ, přijde vhod.
+Datové typy nejsou v jazyce Python dodržovány a kontrolovány tolik, jako
+v některých jiných jazycích. Díky tomu je vývoj v jazyce Python rychlejší
+a pohodlnější, ale také díky tomu může vzniknout celá řada bugů, které by
+se v jazyce se silnější kontrolou datových typů vůbec nikdy neobjevily. I přes
+nižší podmínky na dodržování datových typů bychom o nich však stejně měli něco
+vědět. Nejenom že se každý programátor ve svém životě setká s alespoň jedním
+jazykem, který je v tomhle ohledu striktnější, ale i v jazyce Python nám znalost
+toho, co je to datový typ, přijde vhod.
 
-Pozorní čtenáři, kteří nepřeskočili úvod, ví, že v počítači jsou všechna data
+Pozorní čtenáři kteří nepřeskočili úvod ví, že v počítači jsou všechna data
 reprezentována číselně. Všechna data, včetně textu nebo dat složených z více
 prvků (tedy objekty). Samotné číslo, nebo přesněji skupina bitů, ovšem nemá
 bez kontextu žádný význam. Co znamená `0b1111010011010000`? Nevíme. Nemůžeme to
@@ -30,10 +30,10 @@ data ale nemusí nutně být objektem.
 
 ## Základní datové typy v jazyce Python
 
-Standardní knihovna jazyka Python obsahuje velké množství tříd, které nalezneme
-v modulech. Kromě těchto tříd ale Python implementuje také několik základních
+Standardní knihovna jazyka Python obsahuje velké množství tříd roztřízených
+do modulů. Kromě těchto tříd ale Python implementuje také několik základních
 datových typů, které jsou přímou součástí jazyka Python a nemusíme je
-importovat. Tyto datové typy jsou `int`, `float`, `bool`, `str`, `list` a další
+importovat. Tyto datové typy jsou `int`, `float`, `bool`, `str`, `list` a další,
 jako třeba `set` nebo `dict`, kterým se z důvodu jejich složitější nátury
 nebudeme nyní věnovat.
 
@@ -88,7 +88,7 @@ not value  # True
 #### Logický součin
 
 Logický součin už je třeba provést na dvou logických hodnotách. Logický součin
-provádíme pomocí operátoru `and`. Logický součin vrátí hodnotu `True`, pokud
+provádíme pomocí operátoru `and`. Logický součin vrátí hodnotu `True` pokud
 mají oba dva operandy součinu hodnotu `True`. V opačném případě vrátí hodnotu
 `False`.
 
@@ -116,7 +116,7 @@ False or not False  # True
 
 Porovnávání hodnot úzce souvisí s datovým typem `bool`, neboť porovnání vrací
 jako svůj výsledek právě logickou hodnotu. Přesněji řečeno, pokud je výsledek
-porovnání pravidivý, vrací porovnávací operace hodnotu `True`. V opačném případě
+porovnání pravdivý, vrací porovnávací operace hodnotu `True`. V opačném případě
 vrací hodnotu `False`.
 
 V programovací jazyce Python existuje několik operátorů určených k porovnávání
@@ -167,6 +167,8 @@ Porovnávací operátory v jazyce Python lze také řetězit. Takto zřetězený
 vrátí hodnotu `True` pouze pokud jsou všechna porovnání ve výrazu pravdivá.
 
 ```Python
+1 < 2 < 3  # True
+1 == (2 - 1) == (14 % 13)  # True
 1 == (2 - 1) < 3 > 2 != -1  # True
 ```
 
@@ -182,11 +184,15 @@ Při přetypování platí následující pravidla:
 
 1) Všechny číselné hodnoty, které se nerovnají 0, odpovídají hodnotě `True`
 2) Nula odpovídá hodnotě `False`
-3) Všechny neprázdné kolekce(viz příští kapitola) odpovídají hodnotě `True`
+3) Všechny neprázdné kolekce (viz příští kapitola) odpovídají hodnotě `True`
 4) Všechny prázdné kolekce odpovídají hodnotě `False`
 5) Hodnota `None` (viz příští odstavec) vždy vrací `False`
 6) Všechny ostatní objekty vrací `True`, pokud nemají definovanou vlastní
 konverzi
+
+Zjednodušeně bychom mohli říct, že pokud je hodnota `0`, prázdná, nebo vůbec
+žádná hodnota není, výraz odpovídá logické hodnotě `False`. Vše ostatní odpovídá
+hodnotě `True`.
 
 ## `None`
 
