@@ -37,23 +37,23 @@ které jsou k dokončení příkladů potřeba, je dostupný níže.
 
 2) Nakreslit kruh
 
-3) Nakreslit trojúhelník
+3) Nakreslit trojúhelník, nejlépe pomocí cyklu
 
 4) Nakreslit čtverec pomocí cyklu
 
 5) Nakreslit šestiúhelník pomocí cyklu
 
-6) Nakreslit znak Audi pomocí cyklu
+6) Nakreslit znak Audi pomocí cyklu, nejlépe pomocí cyklu
 
-7) Nakreslit logo Olympijských her
+7) Nakreslit logo Olympijských her, lze využít cyklu
 
 8) Nakreslit kruh pomocí cyklu (bez metody `circle`)
 
 9) Nakreslit vlny
 
-10) Nakreslit vlny bez metody `circle`
+10) Nakreslit vlny bez metody `circle`, nejlépe bez použití kódu z příkladu 8
 
-## Seznam potřebných metod
+## Seznam potřebných metod
 
 ### forward(distance)
 
@@ -109,7 +109,7 @@ t.forward(100)
 
 Parametry:
 
-* angle - úhel ve stupních, o jaký se má želva otočit
+* angle - úhel, o který se má želva otočit; udává se ve stupních
 
 Funkce: Želva se otočí o `angle` stupňů doprava
 
@@ -127,7 +127,7 @@ t.forward(100)
 
 Parametry:
 
-* angle - úhel ve stupních, o jaký se má želva otočit
+* angle - úhel, o který se má želva otočit; udává se ve stupních
 
 Funkce: Želva se otočí o `angle` stupňů doleva
 

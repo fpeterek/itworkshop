@@ -232,9 +232,74 @@ lst = list(range(1, 11))
 print(lst)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-## Přerušení cyklu
+### `break`
 
+Někdy se může stát, že potřebujeme cyklus přerušit před jeho úplným dokončením.
+Příkladem budiž nekonečný cyklus (`while True`), který by samozřejmě nedoběhl
+nikdy. V takovém případě můžeme využít příkazu `break`. `break` zajistí okamžité
+přerušení cyklu a program pokračuje dále prvním příkazem za cyklem. Příkaz
+`break` je tedy také jedním ze skoků. Lze jej samozřejmě použít jak v cyklu
+`for`, tak v cyklu `while`. `break` je operátor, proto jej zapisujeme bez
+závorek. Nepřijímá žádné argumenty.
 
+```Python
+# Vygeneruje list náhodných čísel
+# Pomocná funkce využitá k vysvětlení příkazů break/continue
+
+def get_random_list():
+    import random
+    lst = []
+    for i in range(0, 10_000):
+        lst.append(random.randint(0, 100))
+    return lst
+
+lst = get_random_list()
+first_five = None
+
+# Nalezení indexu první pětky
+
+for i in range(0, len(lst) - 1):
+    if lst[i] == 5:
+        first_five = i
+        break  # Po nalezení první pětky vyskoč z cyklu
+
+if i is not None:
+    print(f'First 5 was found at index {i}')
+else:
+    print('No 5 was found')
+```
+
+### `continue`
+
+`Continue` je druhý skok používaný ve spojení s cyklem. Narozdíl od příkazu
+`break` ovšem nezpůsobí vyskočení z cyklu. Operátor `continue` způsobí ukončení
+pouze současné iterace cyklu. Jinými slovy, jakmile počítač narazí na příkaz
+`continue`, automaticky ignoruje zbytek bloku cyklu a vrací se zpět na začátek
+cyklu, kde znovu kontroluje podmínku a případně pokračuje v cyklu dále. Operátor
+`continue` zapisujeme podobným způsobem jako operátor `break`.
+
+```Python
+lst = get_random_list()
+sum_of_even_numbers = 0
+number_of_even_numbers = 0
+
+# Výpočet průměrné hodnoty všech sudých čísel v kolekci
+# Kód lze samozřejmě zapsat také bez použití continue
+# continue nám především pomůže vyhnout se zbytečnému vnoření kódu a umožňuje
+# nám psát čitelnější kód
+
+for i in lst:
+    if i % 2 == 1:
+        continue
+    sum_of_even_numbers += i
+    number_of_even_numbers += 1
+
+if number_of_even_numbers:
+    avg = sum_of_even_numbers / number_of_even_numbers
+    print(f'Average of even numbers in collection is {avg}')
+else:
+    print('No even numbers found in collection')
+```
 
 ## Definice vlastních funkcí
 
