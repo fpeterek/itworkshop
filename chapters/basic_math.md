@@ -100,7 +100,11 @@ předchozího výpočtu. Jakmile proměnné přiřadíme nějakou hodnotu,
 proměnná se stává s přiřazenou hodnotou zaměnitelná.
 
 Název proměnné může obsahovat malá a velká písmena, čísla a podtržítka,
-začínat ale musí podtržítkem nebo písmenem.
+začínat ale musí podtržítkem nebo písmenem. Při vyběru názvu proměnné bychom
+se také měli vyhnout klíčovým slovům jazyka Python (anglicky 'keywords').
+Nemusíme mít ale strach, klíčová slova se nemusíme učit zpaměti, překladač,
+a často i editor, nás dokáže v případě špatného výběru názvu proměnné varovat.
+Klíčové slova se navíc s postupným používáním bez problémů naučíme.
 
 Proměnnou přiřadíme pomocí operátoru `=`.
 

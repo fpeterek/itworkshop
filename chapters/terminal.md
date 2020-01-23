@@ -8,8 +8,8 @@ být vhodné. Z tohoto důvodu přejdeme k jinému prostředí, IDE Pycharm.
 IDE (Integrated Development Environment) je prostředí vytvořené za účelem psaní
 a debugování kódu. Nabízí zvýrazňování syntaxe, našeptávač kódu, nástroje pro
 spouštění, testování a debugování programu a spoustu dalších funkcí. My
-využijeme IDE PyCharm. Prostředí PyCharm nabízí kromě verzi placenou i
-neplacenou. Placená verze je ovšem poskytována studentům zdarma. Prostředí
+využijeme IDE PyCharm. Prostředí PyCharm nabízí verzi placenou i neplacenou.
+Placená verze je ovšem poskytována studentům zdarma. Prostředí
 PyCharm [lze stáhnout zde](https://www.jetbrains.com/pycharm/download/).
 
 
@@ -23,20 +23,20 @@ Vývojové prostředí PyCharm je dnes považováno v podstatě za standard mezi
 vývojáři používajícími Python. Díky své spoustě funkcí se ovšem může na první
 pohled zdát komplikovanější, než ve skutečnosti je. Proto si ukážeme, jak lze
 ve vývojovém prostředí PyCharm vytvořit projekt a napsat a následně spustit
-jednoduchý zdrojový kód.
+jednoduchý program.
 
 #### Spuštění PyCharmu a vytvoření projektu
 
 Docela ironicky se situace zkomplikuje již při spuštění PyCharmu. Po spuštění
 může totiž dojít ke dvěma odlišným věcem. Může dojít k zobrazení okna sloužícímu
-k výběru projektu, nebo přímo k otevření projektu již existujícího. Toto chování
+k výběru projektu, nebo k otevření již existujícího projektu. Toto chování
 závisí na nastavení a předchozím užívání prostředí PyCharm. Po prvním spuštění
 je navíc třeba PyCharm nakonfigurovat. V takovém případě je méně zkušeným
 programátorům doporučováno ponechání původního nastavení, s výjimkou barevného
 motivu, který si může každý nastavit dle svých preferencí. Také je silně
-doporučováno **neaktivovat** Vim plugin bez předchozích zkušeností s editorem
+doporučováno **neaktivovat** Vim plugin, pokud nemáte zkušenost s editorem
 Vim (budete mi muset věřit, bez předchozí zkušenosti s tímto textovým editorem
-vám tento plugin velmi ztíží práci se zabudovaným editorem v prostředí PyCharm).
+vám Vim plugin velmi ztíží práci se zabudovaným editorem v prostředí PyCharm).
 
 Pokud se otevře uvítací okno s výběrem projektu, můžeme založit nový projekt,
 anebo otevřít projekt starší. Jen pozor, ať neotevřeme cizí projekt!
@@ -85,13 +85,17 @@ python3 /path/to/file.py
 ```
 
 Nejjednodušší řešení samozřejmě je přesunout se do složky se zdrojovými kódy
-za pomocí příkazu `cd`. Poté je totiž stačí jako cestu k souboru zadat pouze
+za pomocí příkazu `cd`. Poté totiž stačí jako cestu k souboru zadat pouze
 název daného souboru.
 
+```Bash
+python3 file.py
+```
+
 Za využití následujících příkazů můžeme na ploše vytvořit složku test,
-ve které vytvoříme soubor main.py, do kterého následně můžeme psát zdrojový
-kód a poté jej i spustit. Příkazy fungují pouze v operačních systémech Linux
-a mac OS.
+kde vytvoříme soubor main.py, do nějž následně můžeme psát zdrojový kód a
+poté jej i spustit. Příkazy fungují pouze v Unixových operačních systémech
+(Linux, macOS, FreeBSD...).
 
 ```Bash
 cd Desktop/     # Přesun do složky Desktop (na systémech v češtině je třeba napsat 'Plocha' místo 'Desktop')
@@ -101,14 +105,14 @@ touch main.py   # Vytvoření soubory main.py
 
 # Následující příkaz je nepovinný. Místo něj můžeme soubor upravit v libovolném
 # textovém editoru.
-echo 'print("Hello, World!")' > main.py # Zapsání programu 'Hello, World!' do souboru
+echo 'print("Hello, World!")' > main.py  # Zapsání programu 'Hello, World!' do souboru
 
 
-python3 main.py # Spuštění souboru main.py
+python3 main.py  # Spuštění souboru main.py
 ```
 
 Vše lze samozřejmě provést také v grafickém rozhraní, nemusíme nutně používat
-terminál. Spousta programátorů ale po nějaké době začne preferovat textové
+terminál. Většina programátorů ale po nějaké době začne preferovat textové
 rozhraní terminálu, jelikož jim přijde rychlejší a příjemnější na použití
 (opravdu, věřte mi).
 

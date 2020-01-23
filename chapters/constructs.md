@@ -6,6 +6,14 @@ program, který by postupně vykonal sérii příkazů v pořadí, v jakém jsou
 Bohužel, toto nám nestačí k vytvoření komplexních programů. Ne vždy chceme, aby
 byly instrukce vykonávány sekvenčně. V takovém případě je třeba využít skoků.
 
+Dříve jsme si řekli, že skoky vedou ke špatně čitelnému 'špagetovému' kódu.
+A teď mluvíme o skocích jako o nástroji, bez nějž nelze vytvořit složitější
+program. Je to tak, nelze, skoky používáme dodnes. V moderních programovacích
+jazycích jsou ale skoky používány nepřímo. Jsou skryty za různé jazykové
+konstrukce a kontrolovány překladačem. Také je možné využití skoků omezeno tak,
+aby se předešlo chybám a nečitelnému kódu a aby byli programátoři nuceni psát
+rozumně strukturovaný kód.
+
 Skoky jsme nevědomě využili již dříve při volání funkcí. Když totiž voláme
 funkci, počítač musí skočit v kódu na místo, kde se daná funkce nachází.
 Následně vykoná kód funkce a nakonec se vrátí zpět na místo původního skoku.
@@ -19,8 +27,8 @@ nebo **IDE**. Dále začneme názvy proměnných uvádět v angličtině.
 
 ## Odsazování
 
-Ve většině ostatních jazyků se odsazování používá pouze z estetického hlediska
- - správně odsazený kód vypadá lépe a je čitelnější. V jazyce Python má ovšem
+Ve většině ostatních jazyků se odsazování používá pouze z estetického hlediska -
+správně odsazený kód vypadá lépe a je čitelnější. V jazyce Python má ovšem
 odsazování speciální význam. Využívá se k denotaci bloků, je součást syntaxe
 jazyka Python a musíme tedy dodržovat přesně daná pravidla. To se sice může
 novým programátorům zdát zbytečně náročné a komplikované, ve skutečnosti díky
@@ -36,8 +44,8 @@ odsazení příliš nevyplývá. Na příkladu ale vše bude vidět daleko lépe
 ## Jeden příkaz na řádek
 
 Pravidlo, kterého jsme se zatím celou dobu drželi, a které částečně vyplývá i
-z předchozího odstavce. Je jej třeba zmínit, když už mluvíme o syntaxi jazyka
-Python, ale jak již z nadpisu vyplývá, na jeden řádek můžeme psát maximálně
+z předchozího odstavce. Je třeba jej zmínit, když už mluvíme o syntaxi jazyka
+Python. Jak již z nadpisu vyplývá, na jeden řádek můžeme napsat maximálně
 jeden příkaz. Naopak to ale neplatí. Pokud bychom měli příliš dlouhý výraz,
 můžeme si jej rozložit na více řádků. Na jednom řádku by však více než jeden
 příkaz být neměl. Stejně tak můžeme využít prázdných řádků, abychom kód
@@ -46,7 +54,7 @@ příkaz být neměl. Stejně tak můžeme využít prázdných řádků, abycho
 ## Konstrukce `if`/`elif`/`else`
 
 Konstrukci `if` využijeme, pokud chceme blok kódu provést pouze za předpokladu,
-že je splněna určitá podmínka. Pokud podmínka splněná není, kód se neprovede,
+že je splněná určitá podmínka. Pokud podmínka splněná není, kód se neprovede,
 počítač skočí na konec bloku `if` a pokračuje dál v exekuci programu.
 
 Syntax konstrukce `if` je velmi jednoduchá. Za klíčové slovo `if` zapíšeme svou
@@ -54,7 +62,7 @@ podmínku (podmínkou může být jakýkoliv výraz, jehož výsledkem je hodnot
 `bool`). Za podmínku napíšeme znak `:`. Dále od nového řádku zapisujeme kód,
 který chceme provést pouze pokud bude podmínka pravdivá. Všimněte si, že zde již
 musí být kód odsazen čtyřmi mezerami. Jakmile chceme blok `if` ukončit, snížíme
-úroveň odsazení. Řetězec `'konec'` se tedy vypíše nezávisle na vstupu.
+úroveň odsazení. Řetězec `'Konec'` se tedy vypíše nezávisle na vstupu.
 
 ```Python
 i = int(input('Číslo: '))
@@ -108,7 +116,7 @@ ale zapsat pouze za `if` nebo `elif` blok. V opačném případě nám počíta�
 chybu.
 
 Blok `else` zapisujeme podobně jako blok `if`. Větev `else` ovšem nevyžaduje
-podmínku, proto za klíčové slovo `else` dopisujeme rovnou `:` a podmínku
+podmínku, proto za klíčové slovo `else` píšeme rovnou `:` a podmínku
 neuvádíme.
 
 ```Python
@@ -170,7 +178,7 @@ hodnotu `True`.
 import time
 
 i = 0
-# Nekonečný cyklus lze ukončit stiskem ctrl+c
+# Nekonečný cyklus, program lze ukončit stiskem ctrl+c
 while True:
     print(i)
     i += 1
@@ -182,7 +190,7 @@ while True:
 Cyklus `for` se nejčastěji využívá k průchodu kolekcí. Cyklus `for` vytvoří
 proměnnou, do které postupně přiřazuje prvky z kolekce jeden za druhým. Pro
 každou hodnotu v kolekci proběhne tělo cyklu právě jednou. Pozor! Pokud
-proměnné využité cyklem `for` přiřadíme jinou hodnotu, změníme pouze danou
+proměnné vytvořené cyklem `for` přiřadíme jinou hodnotu, změníme pouze danou
 proměnnou, nezměníme původní hodnotu v kolekci.
 
 ```Python
@@ -224,6 +232,10 @@ lst = list(range(1, 11))
 print(lst)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
+## Přerušení cyklu
+
+
+
 ## Definice vlastních funkcí
 
 Proč a jak využíváme funkce v programovacích jazycích jsme si ukázali
@@ -237,7 +249,9 @@ závorku zapíšeme znak `:`. Dále již pokračujeme na novém řádku, kde kó
 odsadit.
 
 Pokud bychom chtěli z funkce vrátit nějakou hodnotu, můžeme tak udělat za pomocí
-klíčového slova `return`.
+klíčového slova `return`. `return` se může objevit ve funkci vícekrát, nemusí
+se nacházet jen na konci funkce. Klíčovým slovem `return` okamžitě vyskočíme
+z funkce, zbytek funkce se neprovádí.
 
 ```Python
 import math
