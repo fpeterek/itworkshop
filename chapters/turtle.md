@@ -37,21 +37,23 @@ které jsou k dokončení příkladů potřeba, je dostupný níže.
 
 2) Nakreslit kruh
 
-3) Nakreslit trojúhelník, nejlépe pomocí cyklu
+3) Nakreslit přerušovanou čáru pomocí cyklu
 
-4) Nakreslit čtverec pomocí cyklu
+4) Nakreslit trojúhelník, nejlépe pomocí cyklu
 
-5) Nakreslit šestiúhelník pomocí cyklu
+5) Nakreslit čtverec pomocí cyklu
 
-6) Nakreslit znak Audi pomocí cyklu, nejlépe pomocí cyklu
+6) Nakreslit šestiúhelník pomocí cyklu
 
-7) Nakreslit logo Olympijských her, lze využít cyklu
+7) Nakreslit znak Audi pomocí cyklu, nejlépe pomocí cyklu
 
-8) Nakreslit kruh pomocí cyklu (bez metody `circle`)
+8) Nakreslit logo Olympijských her, lze využít cyklu
 
-9) Nakreslit vlny
+9) Nakreslit kruh pomocí cyklu (bez metody `circle`)
 
-10) Nakreslit vlny bez metody `circle`, nejlépe bez použití kódu z příkladu 8
+10) Nakreslit vlny
+
+11) Nakreslit vlny bez metody `circle`, nejlépe bez použití kódu z příkladu 8
 
 ## Seznam potřebných metod
 
@@ -165,6 +167,21 @@ t.forward(200)
 t.pendown()
 t.circle(50, 45)
 ```
+
+### reset()
+
+Parametry: žádné
+
+Funkce: Resetuje stav želvy a vyčistí okno
+
+```Python
+import Turtle
+t = turtle.Turtle()
+
+t.circle(100)
+t.reset()
+```
+
 
 Třída `Turtle` obsahuje ještě spoustu dalších metod, které lze [dohledat
 v dokumentaci](https://docs.python.org/3.3/library/turtle.html). Příklady
