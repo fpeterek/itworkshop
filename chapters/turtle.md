@@ -55,6 +55,10 @@ které jsou k dokončení příkladů potřeba, je dostupný níže.
 
 11) Nakreslit vlny bez metody `circle`, nejlépe bez použití kódu z příkladu 8
 
+### Řešení příkladů
+
+Možné řešení příkladů [lze nalézt zde](https://github.com/fpeterek/itworkshop-solutions/blob/master/solutions.py).
+
 ## Seznam potřebných metod
 
 ### forward(distance)
