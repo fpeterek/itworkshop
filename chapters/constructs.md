@@ -327,7 +327,7 @@ def greet(name):
 def hello_world():
     greet('World')
 
-def calc_perimeter(radius):
+def calc_area(radius):
     return round(math.pi * radius**2, 2)
 
 def sum_of_numbers(lst):
@@ -347,7 +347,7 @@ def is_valid_triangle(a, b, c):
 
 hello_world()  # Hello, World!
 greet('Python')  # Hello, Python!
-calc_perimeter(4)  # 50.27
+calc_area(4)  # 50.27
 sum_of_numbers(list(range(1, 11)))  # 55
 is_valid_triangle(3, 4, 5)  # True
 is_valid_triangle(3, 4, 8)  # False
